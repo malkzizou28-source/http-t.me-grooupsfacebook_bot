@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groups Facebook Viewer</title>
+
+<style>
+body{
+    margin:0;
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial, sans-serif;
+    text-align:center;
+}
+
+.container{
+    margin-top:60px;
+}
+
+h2{
+    margin-bottom:30px;
+    color:#0088cc;
+}
+
+input{
+    padding:12px;
+    width:250px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    font-size:16px;
+}
+
+button{
+    padding:12px 25px;
+    margin-top:15px;
+    background:#0088cc;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#006699;
+}
+
+.footer{
+    position:fixed;
+    bottom:10px;
+    width:100%;
+    font-size:12px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>📘 Facebook Group Viewer</h2>
+
+    <input type="number" id="groupId" placeholder="اكتب رقم المجموعة">
+    <br>
+    <button onclick="openGroup()">بحث</button>
+</div>
+
+<div class="footer">
+    Powered by Telegram WebApp
+</div>
+
+<script>
+function openGroup() {
+    let id = document.getElementById("groupId").value;
+
+    if(id === ""){
+        id = 1;
+    }
+
+    let url = "https://facebook.com/groups/" + id;
+
+    window.location.href = url;
+}
+</script>
+
+</body>
+</html>
